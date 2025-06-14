@@ -1,0 +1,34 @@
+# Entorno virtual (venv)
+venv/
+env/
+ENV/
+include/
+Lib/
+Scripts/
+pyvenv.cfg
+
+# Compilados de Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Archivos de entorno
+.env
+
+# Archivos de sistema o IDE
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Archivos de prueba o caché
+*.log
+*.sqlite3
+*.db
+*.bak
+
+# Otros
+*.zip
+*.tar.gz
+*.rar

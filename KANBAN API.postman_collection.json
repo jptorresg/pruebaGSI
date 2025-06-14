@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "29a0e73e-d275-4bbc-8797-2da0e7df3ebc",
+		"name": "KANBAN API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41343310"
+	},
+	"item": [
+		{
+			"name": "Crear Tarea",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titulo\": \"Diseñar login\",\r\n  \"descripcion\": \"Pantalla de login con validaciones\",\r\n  \"estado\": \"stories\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/tareas/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"tareas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Tareas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "inherit"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/tareas/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"tareas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Tarea por ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/tareas/{{tarea_id}}",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"tareas",
+						"{{tarea_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Tarea",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titulo\": \"Diseñar login actualizado\",\r\n  \"descripcion\": \"Pantalla de login con validaciones y pruebas\",\r\n  \"estado\": \"stories\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/tareas/{{tarea_id}}",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"tareas",
+						"{{tarea_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Tarea",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/tareas/{{tarea_id}}",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"tareas",
+						"{{tarea_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Avanzar Tarea",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/tareas/{{tarea_id}}/avanzar",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"tareas",
+						"{{tarea_id}}",
+						"avanzar"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "tarea_id",
+			"value": "5",
+			"type": "string"
+		}
+	]
+}
